@@ -1,5 +1,7 @@
 package com.h2;
 
+import java.util.Iterator;
+
 /**
  * Hello world!
  *
@@ -12,6 +14,14 @@ public class App
     }
 
     public static int doubleTheNumber(int number) {
-        return -1;
+        return number * 2;
+    }
+    
+    private static int add(int[] numbers) {
+    	int sum = 0;
+    	for (int num : numbers) {
+    		sum += num;
+		}
+    	return sum;
     }
 }
