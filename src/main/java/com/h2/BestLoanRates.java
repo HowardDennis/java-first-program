@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class BestLoanRates {
 
+	public static final Map<Integer, Float> bestRates = Map.of(1, 5.50f, 2, 3.45f, 3, 2.67f);
+	
 	public static void main(String[] args) {
 		System.out.println("Enter your name");
 		Scanner scanner = new Scanner(System.in);
@@ -25,12 +27,8 @@ public class BestLoanRates {
 		}
 	}
 
-	public static final Map<Integer, Float> bestRates() {
-		return Map.of(1, 5.50f, 2, 3.45f, 3, 2.67f);
-	}
-
 	public static float getRates(int loanTermInYears) {
-		Float bestRate = bestRates().get(loanTermInYears);
+		Float bestRate = bestRates.get(loanTermInYears);
 		return bestRate != null ? bestRate : 0.0f;
 	}
 }
